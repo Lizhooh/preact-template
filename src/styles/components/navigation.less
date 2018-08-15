@@ -1,0 +1,35 @@
+
+.navigation {
+    position: fixed;
+    left: 0; top: 0;
+    padding: 0;
+    width: 100%;
+    height: @navigation-height;
+    background: @theme-color;
+    z-index: @navigation-zindex;
+
+    & > .menu {
+        float: right;
+        font-size: 100%;
+
+        a {
+            display: inline-block;
+            height: @navigation-height;
+            line-height: @navigation-height;
+            padding: 0 15px;
+            min-width: 50px;
+            text-align: center;
+            background: transparent;
+            text-decoration: none;
+            color: @navigation-text-color;
+            will-change: background-color;
+
+            &:hover, &:active {
+                background: rgba(1, 1, 1, 0.1);
+            }
+            &.active {
+                background: rgba(1, 1, 1, 0.2);
+            }
+        }
+    }
+}
