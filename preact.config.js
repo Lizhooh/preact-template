@@ -11,11 +11,13 @@ module.exports = function (config, env, helpers) {
     });
 
     // HtmlWebpackPlugin
-    config.plugins[5].options = merge(config.plugins[5].options, {
-        title: 'myapp',
-        config: {
-            template: 'src/temp.html',
-        },
+    config.plugins[5] = merge(config.plugins[5], {
+        options: {
+            title: 'myapp',
+            config: {
+                template: 'src/temp.html',
+            },
+        }
     });
 
     return config;
